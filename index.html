@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Nessa Alvionita, S.Pd! ❤️</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* Efek Hati Melayang di Background */
+        .heart-bg {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            animation: floatHeart 6s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+
+        /* Kontainer Utama */
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            max-width: 480px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3.2rem;
+            color: #fff;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #fce4ec;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Kotak Penghitung Waktu Hidup (Live Counter) */
+        .age-counter-box {
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 20px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .age-counter-box h3 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .counter-grid {
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.8rem;
+        }
+
+        .counter-item span {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Tombol Interaktif */
+        .btn-love {
+            background: #fff;
+            color: #ff4e78;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-love:hover {
+            background: #ff4e78;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Kotak Pesan Rahasia */
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.9rem;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Tanda Tangan / Pengirim */
+        .signature {
+            margin-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+        }
+
+        .signature p {
+            font-size: 0.85rem;
+            color: #fce4ec;
+            margin-bottom: 2px;
+        }
+
+        .signature h4 {
+            font-family: 'Sacramento', cursive;
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            font-weight: normal;
+        }
+
+        /* Menyembunyikan pemutar YouTube */
+        .hidden-audio-player {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efek Hati Melayang di Background -->
+    <script>
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart-bg');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.animationDelay = (Math.random() * 5) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            document.body.appendChild(heart);
+        }
+    </script>
+
+    <div class="container">
+        <h1>Happy Birthday</h1>
+        <h2>Nessa Alvionita, S.Pd ❤️</h2>
+        
+        <!-- Bagian Umur & Penghitung Waktu Real-Time -->
+        <div class="age-counter-box">
+            <h3 id="umurText">Selamat Ulang Tahun yang ke-23! 🎉</h3>
+            <div class="counter-grid">
+                <div class="counter-item"><span id="days">0</span>Hari</div>
+                <div class="counter-item"><span id="hours">0</span>Jam</div>
+                <div class="counter-item"><span id="minutes">0</span>Menit</div>
+                <div class="counter-item"><span id="seconds">0</span>Detik</div>
+            </div>
+            <p style="font-size: 0.75rem; margin-top: 6px; margin-bottom: 0; color: #fce4ec;">Waktu indah sejak kamu lahir di dunia ini ✨</p>
+        </div>
+
+        <p>
+            Hari ini adalah hari spesial buat orang yang paling spesial di hidupku. 
+            Terima kasih sudah jadi sumber kebahagiaanku setiap hari. 
+            Semoga semua impian dan harapanmu di tahun ini bisa terwujud ya, sayang!
+        </p>
+
+        <!-- Tombol Interaktif Kejutan -->
+        <button class="btn-love" onclick="bukaKejutan()">
+            <i class="fas fa-gift"></i> Klik untuk Buka Kejutan
+        </button>
+
+        <div id="pesanRahasia" class="hidden-message">
+            <p style="margin-bottom: 0;">
+                "Aku mungkin tidak selalu bisa jadi yang sempurna, tapi satu hal yang pasti: cintaku ke kamu tulus selamanya. I love you so much! 😘✨"
+            </p>
+        </div>
+
+        <!-- Bagian Pengirim Ucapan -->
+        <div class="signature">
+            <p>From with love:</p>
+            <h4>Eri Yulian Hidayat, S.Kom</h4>
+        </div>
+
+        <!-- Audio YouTube Tersembunyi (Hanya Suara) -->
+        <div class="hidden-audio-player">
+            <iframe id="ytAudio" src="" allow="autoplay" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Tanggal Lahir: 13 Oktober 2003
+        const birthDate = new Date("2003-10-13T00:00:00");
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - birthDate;
+
+            let age = 23; 
+            document.getElementById("umurText").innerText = `Selamat Ulang Tahun yang ke-${age}! 🎉`;
+
+            // Hitung detail hari, jam, menit, detik sejak lahir
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        // Jalankan setiap 1 detik agar angkanya terus bergerak real-time
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function bukaKejutan() {
+            var pesan = document.getElementById("pesanRahasia");
+            var ytAudio = document.getElementById("ytAudio");
+            var videoId = "2Vv-BfVoq4g"; // ID Lagu Ed Sheeran - Perfect (bisa diganti)
+
+            if (pesan.style.display === "block") {
+                pesan.style.display = "none";
+                ytAudio.src = ""; 
+            } else {
+                pesan.style.display = "block";
+                ytAudio.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+            }
+        }
+    </script>
+
+</body>
+</html>
